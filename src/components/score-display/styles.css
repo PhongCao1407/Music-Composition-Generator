@@ -1,0 +1,170 @@
+/* 
+CSS Reset
+http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*
+Application CSS
+*/
+
+
+html * {
+    font-family: 'Inter', 'Arial';
+    font-style: normal;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 2fr 14fr 1fr;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 367px;
+    height: 125px;
+    background-color: #3A3939;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo>img {
+    width: 70%;
+    height: 70%;
+}
+
+nav {
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.navbox {
+    background-color: #AEAEAE;
+    padding: 15px 30px;
+}
+
+#create {
+    background-color: #696969;
+    color: #FFFFFF;
+}
+
+
+main {
+    background-color: #B9B9B9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 367px;
+    gap: 45px;
+}
+
+.music-type {
+    background-color: #353535;
+    height: 70px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-type>h1 {
+    padding: 5px 0;
+    color: #e3e3e3;
+    font-weight: bold;
+    font-size: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.display-window {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display: grid;
+    grid-template-rows: 1fr 7fr 1fr;    
+}
+
+.score-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.play-bar {
+    background-color: #353535;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 40px 40px;
+}
+
+.play-bar>img {
+    height: 40px;
+    width: 40px;
+}
+
+footer {
+    background-color: #3A3939;
+}
+
+
