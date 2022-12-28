@@ -62,14 +62,14 @@ html * {
 
 body {
     display: grid;
-    grid-template-rows: 2fr 14fr 1fr;
+    grid-template-rows: 2fr 18fr 1fr;
 }
 
 header {
     display: flex;
     flex-direction: row;
-    padding: 0px 367px;
-    height: 125px;
+    padding: 0 27%;
+    height: 100px;
     background-color: #3A3939;
 }
 
@@ -80,8 +80,8 @@ header {
 }
 
 .logo>img {
-    width: 70%;
-    height: 70%;
+    width: 85px;
+    height: 85px;
 }
 
 nav {
@@ -96,6 +96,7 @@ nav {
 .navbox {
     background-color: #AEAEAE;
     padding: 15px 30px;
+    border: solid 0.5px #696969;
 }
 
 #create {
@@ -109,7 +110,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 367px;
+    padding: 40px 27%;
     gap: 45px;
 }
 
@@ -159,8 +160,8 @@ main {
 }
 
 .play-bar>img {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
 }
 
 footer {
