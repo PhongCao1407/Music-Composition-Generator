@@ -1,0 +1,279 @@
+/* 
+CSS Reset
+http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*
+Application CSS
+*/
+
+
+html * {
+    font-family: 'Inter', 'Arial';
+    font-style: normal;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 0 27%;
+    height: 100px;
+    background-color: #3A3939;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo>img {
+    width: 85px;
+    height: 85px;
+}
+
+nav {
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.navbox {
+    background-color: #AEAEAE;
+    padding: 15px 30px;
+    border: solid 0.5px #696969;
+}
+
+#create {
+    background-color: #696969;
+    color: #FFFFFF;
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 27%;
+    height: auto;
+}
+
+.speed-duration-options {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.duration-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.duration-options>h2, .speed-options>h2 {
+    color: #828282;
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: underline;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.duration-options>.duration {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0;
+    gap: 10px;
+    align-items: center;
+}
+
+.duration>p {
+    font-size: 45px;
+    font-weight: 1000;
+    color: #5c5c5c;
+    overflow: hidden;
+}
+
+.duration>.arrows {
+    display: flex;
+    flex-direction: column;
+}
+
+.arrows>img {
+    height: 20px;
+    width: 20px;
+}
+
+.speed-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.speed-options>.speeds {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+}
+
+.speeds>.speed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+
+.speed>button {
+    background-color: transparent;
+    border: none;
+    color: #5c5c5c;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.speed>img {
+    height: 20px;
+    width: 20px;
+}
+
+/* Genre */
+.genre-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.genre-option-prompt {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.genre-option-prompt>h3 {
+    color: #828282;
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: underline;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.genre-option-prompt>h1 {
+    color: #4d4d4d;
+    font-size: 50px;
+    font-weight: 1000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.genre-option-wrapper {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+}
+
+.genre-option {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.genre-option>img {
+    height: 175px;
+    width: 175px;
+    border-radius: 10px;
+    border: 5px solid #6b6b6b;
+}
+
+.genre-option>.genre-option-description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.genre-option-description>h2 {
+    font-size: 25px;
+    font-weight: 900;
+    color: #4f4f4f;
+}
+
+.genre-option-description>p {
+    font-weight: 18px;
+    color: #494949;
+}
+
+/* Footer */
+footer {
+    height: 50px;
+    margin-top: auto;
+    background-color: #3A3939;
+}
+
+
