@@ -1,6 +1,7 @@
 import './App.css';
 import logo from './static/Logo.svg';
 import {DisplayPage} from './components/score-display/displayPage';
+import { ScoreOptionPage } from './components/score-options/scoreOptionPage';
 
 const Header = () => {
   return (
@@ -34,7 +35,8 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <DisplayPage/>
+      {/* <DisplayPage/> */}
+      <ScoreOptionPage/>
       <Footer/>
     </div>
   );

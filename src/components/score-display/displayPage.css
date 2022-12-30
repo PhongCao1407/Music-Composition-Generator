@@ -1,4 +1,13 @@
-main {
+html.DisplayPageBody, body.DisplayPageBody, #root.DisplayPageBody {
+    
+}
+
+.App#DisplayPageBody {
+    display: grid;
+    grid-template-rows: 2fr 18fr 1fr;
+}
+
+main#displayPage {
     background-color: #B9B9B9;
     display: flex;
     flex-direction: column;
@@ -56,3 +65,5 @@ main {
     height: 50px;
     width: 50px;
 }
+
+
