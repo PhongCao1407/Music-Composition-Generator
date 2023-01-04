@@ -1,5 +1,5 @@
 {
-  "name": "music-composition-generator",
+  "name": "music-generator-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
