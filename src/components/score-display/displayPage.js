@@ -13,18 +13,18 @@ const DisplayPage = () => {
 
     return (
         <main id="displayPage">
-            <div class="music-type">
+            <div className="music-type">
                 <h1>Music Type</h1>
             </div>
 
-            <div class="display-window">
-                <div class="score-title">
+            <div className="display-window">
+                <div className="score-title">
                     Score Name
                 </div>
-                <div class="score">
+                <div className="score">
 
                 </div>
-                <div class="play-bar">
+                <div className="play-bar">
                     <img src={playButton} alt=""/>
                 </div>
             </div>
