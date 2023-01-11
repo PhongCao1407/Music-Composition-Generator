@@ -61,9 +61,19 @@ main#displayPage {
     border-radius: 0 0 40px 40px;
 }
 
-.play-bar>img {
+.play-bar>button {
     height: 50px;
     width: 50px;
+    background-image: url(./static/Play-Button.svg);
+    border: none;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.play-bar>button:hover {
+    opacity: 90%;
 }
 
 

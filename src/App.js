@@ -7,17 +7,17 @@ const Header = () => {
   return (
     <header>
         <div className="logo">
-            <img src={logo} alt="" srcset=""/>
+            <img src={logo} alt="" srcSet=""/>
         </div>
         <nav>
             <div className="navbox" id="home">
-                <h3>Home</h3>
+                <button>Home</button>
             </div>
             <div className="navbox" id="about">
-                <h3>About</h3>
+                <button>About</button>
             </div>
-            <div className="navbox" id="create">
-                <h3>Create</h3>
+            <div className="navbox">
+                <button id="create">Create</button>
             </div>
         </nav>
     </header>
@@ -35,8 +35,8 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      {/* <DisplayPage/> */}
-      <ScoreOptionPage/>
+      <DisplayPage/>
+      {/* <ScoreOptionPage/> */}
       <Footer/>
     </div>
   );

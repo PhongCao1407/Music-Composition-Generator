@@ -11,4 +11,4 @@ const testCreatePostButton = () => {
 
 
 
-export default {testCreatePostButton};
+export {testCreatePostButton};

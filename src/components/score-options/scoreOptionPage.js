@@ -6,13 +6,11 @@ import bach from './static/bach.png';
 import mozart from './static/mozart.png';
 import chopin from './static/chopin.png';
 
-import testService from '../../services/testService';
+import {testCreatePostButton} from '../../services/testService';
 
 import { useEffect } from 'react';
 
 const ScoreOptionPage = () => {
-
-
     useEffect(() => {
         document.documentElement.className = "ScoreOptionPageBody";
         document.body.className = "ScoreOptionPageBody";
@@ -29,8 +27,10 @@ const ScoreOptionPage = () => {
                     <div className="duration">
                         <p>0:00</p>
                         <div className="arrows">
-                            <img src={upArrow} alt=""/>
-                            <img src={downArrow}/>
+                            <button className="up-arrow"></button>
+                            <button className="down-arrow"></button>
+                            {/* <img src={upArrow} alt=""/>
+                            <img src={downArrow}/> */}
                         </div>
                     </div>
                 </div>
@@ -40,15 +40,15 @@ const ScoreOptionPage = () => {
                     <div className="speeds">
                         <div className="speed">
                             <button>Slow</button>
-                            <img src={checkmark} alt="" srcset=""/>
+                            <img src={checkmark} alt="" srcSet=""/>
                         </div>
                         <div className="speed">
                             <button>Medium</button>
-                            <img src={checkmark} alt="" srcset=""/>
+                            <img src={checkmark} alt="" srcSet=""/>
                         </div>
                         <div className="speed">
                             <button>Fast</button>
-                            <img src={checkmark} alt="" srcset=""/>
+                            <img src={checkmark} alt="" srcSet=""/>
                         </div>
                     </div>
                 </div>
@@ -64,25 +64,25 @@ const ScoreOptionPage = () => {
 
                     <div className="genre-option-wrapper">
                         <div className="genre-option">
-                            <img src={bach} alt="" srcset="" onClick={testService.testCreatePostButton()}/>
-                                <div className="genre-option-description">
-                                    <h2>Baroque</h2>
-                                    <p>Bach, Handel, ..</p>
-                                </div>
+                            <button className="bach-image" onClick={() => testCreatePostButton()}></button>
+                            <div className="genre-option-description">
+                                <h2>Baroque</h2>
+                                <p>Bach, Handel, ..</p>
+                            </div>
                         </div>
                         <div className="genre-option">
-                            <img src={mozart} alt="" srcset=""/>
-                                <div className="genre-option-description">
-                                    <h2>Classical</h2>
-                                    <p>Mozart, Haydn, ..</p>
-                                </div>
+                            <button className="mozart-image"></button>
+                            <div className="genre-option-description">
+                                <h2>Classical</h2>
+                                <p>Mozart, Haydn, ..</p>
+                            </div>
                         </div>
                         <div className="genre-option">
-                            <img src={chopin} alt="" srcset=""/>
-                                <div className="genre-option-description">
-                                    <h2>Romantic</h2>
-                                    <p>Chopin, Schumann, ..</p>
-                                </div>
+                            <button className="chopin-image"></button>
+                            <div className="genre-option-description">
+                                <h2>Romantic</h2>
+                                <p>Chopin, Schumann, ..</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -25,7 +25,7 @@ const DisplayPage = () => {
 
                 </div>
                 <div className="play-bar">
-                    <img src={playButton} alt=""/>
+                    <button></button>
                 </div>
             </div>
         </main>

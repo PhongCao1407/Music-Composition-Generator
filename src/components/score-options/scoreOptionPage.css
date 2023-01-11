@@ -2,7 +2,7 @@ main#scoreOptionPage {
     display: flex;
     flex-direction: column;
     padding: 0 27%;
-    height: auto;
+    height: 100%;
 }
 
 .speed-duration-options {
@@ -47,9 +47,26 @@ main#scoreOptionPage {
     flex-direction: column;
 }
 
-.arrows>img {
+.arrows>button {
     height: 20px;
     width: 20px;
+    background-color: transparent;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.arrows>button:hover {
+    opacity: 50%;
+}
+
+.arrows>.up-arrow {
+    background-image: url(./static/UpArrow.svg);
+}
+
+.arrows>.down-arrow {
+    background-image: url(./static/DownArrow.svg);
 }
 
 .speed-options {
@@ -80,6 +97,11 @@ main#scoreOptionPage {
     font-weight: 800;
 }
 
+.speed>button:hover {
+    color: #848383;
+    
+}
+
 .speed>img {
     height: 20px;
     width: 20px;
@@ -91,6 +113,7 @@ main#scoreOptionPage {
     flex-direction: column;
     gap: 30px;
     padding-top: 10px;
+    overflow:visible;
 }
 
 .genre-option-prompt {
@@ -131,11 +154,30 @@ main#scoreOptionPage {
 
 }
 
-.genre-option>img {
+.genre-option>button {
     height: 175px;
     width: 175px;
     border-radius: 10px;
     border: 5px solid #6b6b6b;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.genre-option>button:hover {
+    border: 5px solid #a19e9e;
+}
+
+.genre-option>.bach-image {
+    background-image: url(./static/bach.png);
+}
+
+.genre-option>.mozart-image {
+    background-image: url(./static/mozart.png);
+}
+
+.genre-option>.chopin-image {
+    background-image: url(./static/chopin.png);
 }
 
 .genre-option>.genre-option-description {

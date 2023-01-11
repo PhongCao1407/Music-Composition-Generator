@@ -4,7 +4,6 @@ http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -98,8 +97,8 @@ header {
 }
 
 .logo>img {
-    width: 85px;
-    height: 85px;
+    width: 80px;
+    height: 80px;
 }
 
 nav {
@@ -113,8 +112,21 @@ nav {
 
 .navbox {
     background-color: #AEAEAE;
-    padding: 15px 30px;
     border: solid 0.5px #696969;
+}
+
+.navbox:hover {
+    background-color: #dbd8d8;
+}
+
+.navbox>button {
+    height: 100%;
+    width: 100%;
+    padding: 15px 30px;
+    font-weight: 500;
+    font-size: 1em;
+    border: none;
+    background-color: transparent;
 }
 
 #create {
