@@ -139,7 +139,7 @@ main {
     height: 100%;
     border-radius: 40px;
     display: grid;
-    grid-template-rows: 1fr 7fr 1fr;    
+    grid-template-rows: 1fr 7fr;    
 }
 
 .score-title {
@@ -151,7 +151,10 @@ main {
     font-weight: bold;
 }
 
-.play-bar {
+#score {
+    height: 100%;
+}
+/* .play-bar {
     background-color: #353535;
     display: flex;
     align-items: center;
@@ -162,7 +165,7 @@ main {
 .play-bar>img {
     height: 50px;
     width: 50px;
-}
+} */
 
 footer {
     background-color: #3A3939;
