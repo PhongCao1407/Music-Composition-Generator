@@ -17,12 +17,8 @@ class OpenSheetMusicDisplay extends Component {
         drawMeasureNumbers: 4,
         measureToDrawRangeNeedsReset: 4,
 
-        showControls: true,
-        showExportPdfControl: false,
-        showPageFormatControl: false,
-        showZoomControl: true,
         showHeader: true,
-        showDebugControls: false,
+        followCursor: true
       }
       this.osmd = new OSMD(this.divRef.current, options);
       this.osmd.load(this.props.file).then(() => this.osmd.render());
