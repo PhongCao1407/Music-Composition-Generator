@@ -1,7 +1,8 @@
 import './displayPage.css'
 import playButton from './static/Play-Button.svg'
 import { useEffect } from 'react';
-import testFile from './DebuMandSample.musicxml'
+import testFile from './static/chopin.mxl'
+// import testFile from './static/Dichterliebe01.musicxml'
 
 import Embed from 'flat-embed'
 
@@ -18,20 +19,44 @@ const renderScore = () => {
         videoPosition: 'float',
         controlsPosition: 'bottom',
         themePrimary: '#353535',
-        branding: false,
     }
     });
 
-    fetch(testFile)
-    .then(response => {
-        console.log(response)
-        return response.text()
-    }).then(xml => {
-        console.log()
-        embed.loadMusicXML(xml)
-    })
-    .then(() => console.log('Embed loaded'))
-    .catch(error => console.error(error));
+    const fileExtension = testFile.split('.').pop();
+
+    if (fileExtension === "mxl") {
+        fetch(testFile)
+        .then(function (response) {
+            console.log(response)
+            return response.arrayBuffer();
+        })
+        .then(function (mxl) {
+        // Got the compressed score as an `ArrayBuffer`, load it in the embed
+            console.log(typeof mxl)
+            return embed.loadMusicXML(mxl);
+        })
+        .then(function () {
+        // Score loaded in the embed
+        })
+        .catch(function (error) {
+        // Unable to load the score
+            
+    });
+    }
+    else {
+        fetch(testFile)
+        .then(response => {
+            console.log(response)
+            return response.text()
+        }).then(xml => {
+            console.log()
+            embed.loadMusicXML(xml)
+        })
+        .then(() => console.log('Embed loaded'))
+        .catch(error => console.error(error));
+    }    
+
+    
 
 }
 
@@ -56,9 +81,10 @@ const DisplayPage = () => {
             </div>
 
             <div className="display-window">
-                
+                <div className="piece-title">
+                    <h2>Etudé, Op. 10, No. 1</h2>
+                </div>
                 <div className="score" id='score'>
-                    {/* <OpenSheetMusicDisplay file={testFile}></OpenSheetMusicDisplay> */}
                 </div>
                 
             </div>

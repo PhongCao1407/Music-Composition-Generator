@@ -85,7 +85,7 @@ html.ScoreOptionPageBody, body.ScoreOptionPageBody, #root.ScoreOptionPageBody {
 header {
     display: flex;
     flex-direction: row;
-    padding: 0 27%;
+    padding: 0 20%;
     height: 100px;
     background-color: #3A3939;
 }
