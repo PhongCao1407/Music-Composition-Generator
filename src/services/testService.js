@@ -1,14 +1,18 @@
 import axios from 'axios';
 
-const testCreatePostButton = () => {
+const getScore = () => {
     const promise = axios
-    .get('http://127.0.0.1:8000/musicgenerator/test/')
-    .then(response => {        
-        console.log('promise fulfilled')
-        console.log(response.data)    
-    })
+    .get('http://localhost:3001/romantic')
+    // .then(response => {        
+    //     console.log(typeof response)
+    //     console.log('promise fulfilled')
+    //     return response.data  
+    // })
+    return promise
+
+    
 }
 
 
 
-export {testCreatePostButton};
+export default { getScore };

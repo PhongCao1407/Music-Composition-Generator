@@ -1,7 +1,9 @@
 import './displayPage.css'
 import playButton from './static/Play-Button.svg'
 import { useEffect } from 'react';
-import testFile from './static/chopin.mxl'
+import services from '../../services/testService';
+
+import testFile from './static/chopin2810.mxl'
 // import testFile from './static/Dichterliebe01.musicxml'
 
 import Embed from 'flat-embed'
@@ -22,42 +24,60 @@ const renderScore = () => {
     }
     });
 
-    const fileExtension = testFile.split('.').pop();
-
-    if (fileExtension === "mxl") {
-        fetch(testFile)
-        .then(function (response) {
-            console.log(response)
-            return response.arrayBuffer();
-        })
-        .then(function (mxl) {
-        // Got the compressed score as an `ArrayBuffer`, load it in the embed
-            console.log(typeof mxl)
-            return embed.loadMusicXML(mxl);
-        })
-        .then(function () {
-        // Score loaded in the embed
-        })
-        .catch(function (error) {
-        // Unable to load the score
-            
-    });
-    }
-    else {
-        fetch(testFile)
-        .then(response => {
-            console.log(response)
-            return response.text()
-        }).then(xml => {
-            console.log()
-            embed.loadMusicXML(xml)
-        })
-        .then(() => console.log('Embed loaded'))
-        .catch(error => console.error(error));
-    }    
 
     
 
+    // // Test Local File on Frontend
+    // const fileExtension = testFile.split('.').pop();
+    // console.log(testFile)
+    // if (fileExtension === "mxl") {
+    //     fetch(score)
+    //     .then(function (response) {
+    //         console.log(response)
+    //         return response.arrayBuffer();
+    //     })
+    //     .then(function (mxl) {
+    //     // Got the compressed score as an `ArrayBuffer`, load it in the embed
+    //         return embed.loadMusicXML(mxl);
+    //     })
+    //     .then(function () {
+    //     // Score loaded in the embed
+    //     })
+    //     .catch(function (error) {
+    //     // Unable to load the score
+    // });
+    // }
+    // else {
+    //     fetch(score)
+    //     .then(response => {
+    //         console.log(response)
+    //         return response.text()
+    //     }).then(xml => {
+    //         console.log()
+    //         embed.loadMusicXML(xml)
+    //     })
+    //     .then(() => console.log('Embed loaded'))
+    //     .catch(error => console.error(error));
+    // }    
+
+
+
+    // Get file from backend
+    // Because getting the file extension is rather difficult, default to mxl file for now
+
+    
+    fetch('http://localhost:3001/romantic')
+    .then(response => {
+        console.log(response)
+        return response.arrayBuffer()
+    })
+    .then(xml => {
+        embed.loadMusicXML(xml)
+    })
+    .then(() => console.log('Embed loaded'))
+    .catch(error => console.error(error))
+
+        
 }
 
 
@@ -77,12 +97,12 @@ const DisplayPage = () => {
     return (
         <main id="displayPage">
             <div className="music-type">
-                <h1>Music Type</h1>
+                <h1>Romantic</h1>
             </div>
 
             <div className="display-window">
                 <div className="piece-title">
-                    <h2>Etudé, Op. 10, No. 1</h2>
+                    <h2>Prelude, Op. 28, No. 10</h2>
                 </div>
                 <div className="score" id='score'>
                 </div>

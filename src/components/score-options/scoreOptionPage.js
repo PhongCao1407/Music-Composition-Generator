@@ -6,7 +6,7 @@ import bach from './static/bach.png';
 import mozart from './static/mozart.png';
 import chopin from './static/chopin.png';
 
-import {testCreatePostButton} from '../../services/testService';
+// import {testCreatePostButton} from '../../services/testService';
 
 import { useEffect } from 'react';
 
@@ -64,7 +64,7 @@ const ScoreOptionPage = () => {
 
                     <div className="genre-option-wrapper">
                         <div className="genre-option">
-                            <button className="bach-image" onClick={() => testCreatePostButton()}></button>
+                            <button className="bach-image"></button>
                             <div className="genre-option-description">
                                 <h2>Baroque</h2>
                                 <p>Bach, Handel, ..</p>
