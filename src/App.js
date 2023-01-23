@@ -1,7 +1,12 @@
 import './App.css';
 import logo from './static/Logo.svg';
 import {DisplayPage} from './components/score-display/displayPage';
+import {
+  BrowserRouter as Router,
+  Routes, Route, Link, useNavigate
+} from "react-router-dom";
 import { ScoreOptionPage } from './components/score-options/scoreOptionPage';
+
 
 const Header = () => {
   return (
@@ -31,14 +36,26 @@ const Footer = () => {
   )
 }
 
-function App() {
+const App = () => {
+  const navigator = useNavigate()
+  
+  const moveToScoreDisplay = (genre) => {
+    navigator('/displaypage')
+  } 
+
   return (
-    <div className="App">
-      <Header/>
-      <DisplayPage/>
-      {/* <ScoreOptionPage/> */}
-      <Footer/>
-    </div>
+      <div className="App">
+        <Header/>
+        
+        <Routes>
+          <Route path='/displaypage' element={<DisplayPage/>}></Route>
+          <Route path="/" element={<ScoreOptionPage handleClick={moveToScoreDisplay}/>} />
+        </Routes>
+
+        <Footer/>
+      </div>
+
+    
   );
 }
 

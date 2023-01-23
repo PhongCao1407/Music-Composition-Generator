@@ -1,11 +1,11 @@
 main#scoreOptionPage {
     display: flex;
     flex-direction: column;
-    padding: 0 27%;
+    padding: 30px 27%;
     height: 100%;
 }
 
-.speed-duration-options {
+/* .speed-duration-options {
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -105,7 +105,7 @@ main#scoreOptionPage {
 .speed>img {
     height: 20px;
     width: 20px;
-}
+} */
 
 /* Genre */
 .genre-options {

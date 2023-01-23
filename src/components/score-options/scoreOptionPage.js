@@ -10,7 +10,7 @@ import chopin from './static/chopin.png';
 
 import { useEffect } from 'react';
 
-const ScoreOptionPage = () => {
+const ScoreOptionPage = (props) => {
     useEffect(() => {
         document.documentElement.className = "ScoreOptionPageBody";
         document.body.className = "ScoreOptionPageBody";
@@ -21,39 +21,7 @@ const ScoreOptionPage = () => {
 
     return (
         <main id="scoreOptionPage">
-            <div className="speed-duration-options">
-                <div className="duration-options">
-                    <h2>Choose the Duration</h2>
-                    <div className="duration">
-                        <p>0:00</p>
-                        <div className="arrows">
-                            <button className="up-arrow"></button>
-                            <button className="down-arrow"></button>
-                            {/* <img src={upArrow} alt=""/>
-                            <img src={downArrow}/> */}
-                        </div>
-                    </div>
-                </div>
 
-                <div className="speed-options">
-                    <h2>Choose the Tempo</h2>
-                    <div className="speeds">
-                        <div className="speed">
-                            <button>Slow</button>
-                            <img src={checkmark} alt="" srcSet=""/>
-                        </div>
-                        <div className="speed">
-                            <button>Medium</button>
-                            <img src={checkmark} alt="" srcSet=""/>
-                        </div>
-                        <div className="speed">
-                            <button>Fast</button>
-                            <img src={checkmark} alt="" srcSet=""/>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
 
                 <div className="genre-options">
 
@@ -64,21 +32,21 @@ const ScoreOptionPage = () => {
 
                     <div className="genre-option-wrapper">
                         <div className="genre-option">
-                            <button className="bach-image"></button>
+                            <button className="bach-image" onClick={props.handleClick}></button>
                             <div className="genre-option-description">
                                 <h2>Baroque</h2>
                                 <p>Bach, Handel, ..</p>
                             </div>
                         </div>
                         <div className="genre-option">
-                            <button className="mozart-image"></button>
+                            <button className="mozart-image" onClick={props.handleClick}></button>
                             <div className="genre-option-description">
                                 <h2>Classical</h2>
                                 <p>Mozart, Haydn, ..</p>
                             </div>
                         </div>
                         <div className="genre-option">
-                            <button className="chopin-image"></button>
+                            <button className="chopin-image" onClick={props.handleClick}></button>
                             <div className="genre-option-description">
                                 <h2>Romantic</h2>
                                 <p>Chopin, Schumann, ..</p>
