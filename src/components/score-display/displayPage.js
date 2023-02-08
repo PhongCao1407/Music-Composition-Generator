@@ -1,14 +1,16 @@
 import './displayPage.css'
 import playButton from './static/Play-Button.svg'
 import { useEffect } from 'react';
-import services from '../../services/testService';
 
-import testFile from './static/Baroque/Baroque_Winter_Largo_easy_arr._for_Small_Ensemble-_Flute_Violin_Cello_A.Vivaldi_.mxl'
+import testFile from './static/Modern/Modern_In_A_Landscape_J.Cage_.mxl'
 import { appID } from './appID';
 
 import Embed from 'flat-embed'
+import { useLocation } from 'react-router-dom';
 
-//Components
+import layoutHelper from '../../helpers/layoutHelper'
+
+//Components/////////////////////////////////////////////////////////////
 
 const Genre = (props) => {
     return (
@@ -29,14 +31,34 @@ const PieceTitle = (props) => {
 
 
 const DisplayPage = () => {
+    //Getting the genre that is passed in from the previous page
+    const {state} = useLocation()
+    const {genre} = state
+    
+    //This function runs everytime the page load
+    //Purposes:
+    //To manipulate the CSS to display the layout correctly
+    //To load the score for the given genre
     useEffect(() => {
+        //Add styles to overall layout specifically for this page
         document.documentElement.className = "DisplayPageBody";
         document.body.className = "DisplayPageBody";
         document.getElementById("root").className = "DisplayPageBody";
         const app = document.getElementsByClassName("App")
         app[0].setAttribute('id', 'DisplayPageBody')
-        renderScore()
 
+        //The About Page hide the footer, this code is needed to make it show again 
+        const footer = document.getElementsByTagName("Footer")[0]
+        footer.style.display = 'flex'
+
+        // Change color of navbar to highlight current tab
+        layoutHelper.resetNavboxButtonColor()
+        const createButton = document.getElementById("create")
+        createButton.style.backgroundColor = "#696969";
+        createButton.style.color = "#FFFFFF"
+        
+        //Load score for the given genre
+        renderScore(genre)
     }, []);
 
     return (
@@ -47,17 +69,18 @@ const DisplayPage = () => {
                 <PieceTitle/>
                 <div className="score" id='score'>
                 </div>
-                
             </div>
         </main>
     )
 }
 
 
-//Helper Functions
+//Helper Functions/////////////////////////////////////////////////////////////
 
-//Flat.io
-const renderScore = () => {
+//Render the score
+//In production, the deafult method is to load the nonlocal score, 
+//the local load part should only be use in case the page fails to fetch a score. 
+const renderScore = (genre) => {
     //Configure container
     const embed = configureEmbeddedContainer()
 
@@ -69,7 +92,7 @@ const renderScore = () => {
     // loadLocalFile(testFile, embed)    
 
     //Get file from dev backend
-    const url = 'http://localhost:3001/baroque/'
+    const url = `http://localhost:3001/${genre}/`
     loadNonlocalFile(embed, url)
    
 }
@@ -108,7 +131,7 @@ const getPieceDetails = (file) => {
     return {genre, pieceTitle, composerName}
 }
 
-
+//Set the piece details in the page
 const setPieceDetails = (genre, pieceTitle, composerName) => {
     const genreComponent = document.getElementById('genre')
     const scoreTitleComponent = document.getElementById('title')
@@ -118,6 +141,7 @@ const setPieceDetails = (genre, pieceTitle, composerName) => {
     scoreComposerNameComponent.textContent = composerName
 }
 
+//Load a local test file
 const loadLocalFile = (file, embed) => {
     
     const fileExtension = file.split('.').pop();

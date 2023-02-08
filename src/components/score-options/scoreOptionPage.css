@@ -1,111 +1,11 @@
 main#scoreOptionPage {
     display: flex;
     flex-direction: column;
-    padding: 30px 27%;
-    height: 100%;
+    padding: 30px 20%;
+    /* height: 100%; */
 }
 
-/* .speed-duration-options {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    padding: 40px 0;
-}
 
-.duration-options {
-    display: flex;
-    flex-direction: column;
-}
-
-.duration-options>h2, .speed-options>h2 {
-    color: #828282;
-    font-size: 25px;
-    font-weight: 800;
-    text-decoration: underline;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.duration-options>.duration {
-    display: flex;
-    flex-direction: row;
-    padding: 15px 0;
-    gap: 10px;
-    align-items: center;
-}
-
-.duration>p {
-    font-size: 45px;
-    font-weight: 1000;
-    color: #5c5c5c;
-    overflow: hidden;
-
-}
-
-.duration>.arrows {
-    display: flex;
-    flex-direction: column;
-}
-
-.arrows>button {
-    height: 20px;
-    width: 20px;
-    background-color: transparent;
-    border: none;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.arrows>button:hover {
-    opacity: 50%;
-}
-
-.arrows>.up-arrow {
-    background-image: url(./static/UpArrow.svg);
-}
-
-.arrows>.down-arrow {
-    background-image: url(./static/DownArrow.svg);
-}
-
-.speed-options {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.speed-options>.speeds {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    justify-content: center;
-}
-
-.speeds>.speed {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2px;
-}
-
-.speed>button {
-    background-color: transparent;
-    border: none;
-    color: #5c5c5c;
-    font-size: 28px;
-    font-weight: 800;
-}
-
-.speed>button:hover {
-    color: #848383;
-    
-}
-
-.speed>img {
-    height: 20px;
-    width: 20px;
-} */
 
 /* Genre */
 .genre-options {
@@ -140,9 +40,9 @@ main#scoreOptionPage {
 }
 
 .genre-option-wrapper {
-    padding-top: 15px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 5%;
 }
@@ -151,6 +51,7 @@ main#scoreOptionPage {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 15px;
 
 }
 
@@ -178,6 +79,14 @@ main#scoreOptionPage {
 
 .genre-option>.chopin-image {
     background-image: url(./static/chopin.png);
+}
+
+.genre-option>.debussy-image {
+    background-image: url(./static/debussy.png);
+}
+
+.genre-option>.schoenberg-image {
+    background-image: url(./static/schoenberg.png);
 }
 
 .genre-option>.genre-option-description {

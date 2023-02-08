@@ -60,14 +60,24 @@ html * {
 }
 
 /* This is for option page */
-html.ScoreOptionPageBody, body.ScoreOptionPageBody, #root.ScoreOptionPageBody {
+/* html.ScoreOptionPageBody, body.ScoreOptionPageBody, #root.ScoreOptionPageBody {
     height: 100%;
-}
+} */
 
 .App#ScoreOptionPageBody {
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+
+/* This is for About Page */
+
+.AboutPage, .App#AboutPage {
+    /* display: flex;
+    flex-direction: column;
+    padding: 30px 20%; */
+    height: 100%;
 }
 
 
@@ -129,10 +139,10 @@ nav {
     background-color: transparent;
 }
 
-#create {
+/* #create {
     background-color: #696969;
     color: #FFFFFF;
-}
+} */
 
 footer {
     height: 50px;

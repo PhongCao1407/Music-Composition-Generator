@@ -1,0 +1,91 @@
+main {
+    position: relative;
+    height: calc(100% - 100px);
+    
+    scroll-behavior: smooth;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    height: 100%;
+    background-size:  cover;
+    scroll-snap-align: start;
+
+    /* For background image */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+
+    padding: 0 5%;
+}
+
+.section>.text-info {
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text-info>h1 {
+    color: #494949;
+    font-size: 1.9em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.text-info>p {
+    color: #383838;
+    font-size: 1.3em;
+}
+
+.section>.composer-image {
+    padding-top: 2%;
+}
+
+.composer-image>img {
+    height: 250px;
+
+    border-radius: 40%;
+    border: solid 5px #4a4a4a;
+}
+
+.title-page {
+    /* height: 100%; */
+
+    background-image: url('./static/Morning.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-page>h1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: #262626;
+}
+
+#baroque {
+    background-image: url('./static/BaroqueBackground.jpg');
+}
+
+#classical {
+    background-image: url('./static/ClassicalBackground.jpg');
+}
+
+#romantic {
+    background-image: url('./static/RomanticBackground.jpg');
+}
+
+#impressionist {
+    background-image: url('./static/ImpressionistBackground.jpg');
+}
+
+#modern {
+    background-image: url('./static/ModernistBackground.jpg');
+}
