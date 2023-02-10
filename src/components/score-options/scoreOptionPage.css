@@ -1,3 +1,23 @@
+html.ScoreOptionPageBody {
+    min-height: 100%;
+    display: flex;
+}
+
+body.ScoreOptionPageBody {
+    flex: 1;
+}
+
+#root.ScoreOptionPageBody {
+    height: 100%;
+}
+
+.App#ScoreOptionPageBody {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
 main#scoreOptionPage {
     display: flex;
     flex-direction: column;

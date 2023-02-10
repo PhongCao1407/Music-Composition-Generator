@@ -1,8 +1,18 @@
-html.DisplayPageBody, body.DisplayPageBody, #root.DisplayPageBody {
-    
+html.DisplayPageBody {
+    min-height: 100%;
+    display: flex;
+}
+
+body.DisplayPageBody {
+    flex: 1;
+}
+
+#root.DisplayPageBody {
+    height: 100%;
 }
 
 .App#DisplayPageBody {
+    height: 100%;
     display: grid;
     grid-template-rows: 2fr 17fr 1fr;
     background-color: #B9B9B9;
@@ -76,8 +86,7 @@ main#displayPage {
 
 .score {
     height: 100%;
-    overflow-x: scroll;
-    overflow-y: scroll;
+    overflow-y: hidden;
     border-radius: 40px;
 }
 
