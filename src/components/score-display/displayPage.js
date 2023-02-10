@@ -92,7 +92,7 @@ const renderScore = (genre) => {
     // loadLocalFile(testFile, embed)    
 
     //Get file from dev backend
-    const url = `http://localhost:3001/${genre}/`
+    const url = `https://music-composition-generator.fly.dev/${genre}/`
     loadNonlocalFile(embed, url)
    
 }
